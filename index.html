@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>DARKVID</title>
+
+<!-- POPUNDER -->
+<script async src="https://sireimplement.com/cf/d7/26/cfd726812d10614ec29390dd3687a1f5.js"></script>
+
+<!-- NATIVE ADS -->
+<script async="async"
+data-cfasync="false"
+src="https://sireimplement.com/83d5edc9887aba56c2cdb2e856dd539e/invoke.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:
+linear-gradient(
+to bottom,
+#120000,
+#220000,
+#320000
+);
+
+color:white;
+}
+
+/* HEADER */
+.header{
+position:sticky;
+top:0;
+z-index:100;
+
+background:
+rgba(15,0,0,0.95);
+
+padding:15px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+border-bottom:
+1px solid rgba(255,0,0,0.2);
+}
+
+.logo{
+font-size:35px;
+font-weight:bold;
+color:#ff295e;
+}
+
+/* SEARCH */
+.search-box{
+padding:15px;
+}
+
+.search{
+width:100%;
+padding:15px;
+
+border:none;
+outline:none;
+
+border-radius:15px;
+
+background:#2b0000;
+color:white;
+font-size:16px;
+}
+
+.search::placeholder{
+color:#aaa;
+}
+
+/* CATEGORY */
+.categories{
+display:flex;
+gap:10px;
+
+overflow:auto;
+
+padding:0 15px 15px;
+}
+
+.categories button{
+border:none;
+
+background:#2a0000;
+color:white;
+
+padding:10px 16px;
+
+border-radius:12px;
+cursor:pointer;
+}
+
+.categories button.active{
+background:
+linear-gradient(
+45deg,
+#ff003c,
+#ff4d6d
+);
+}
+
+/* GRID */
+.grid{
+display:grid;
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:15px;
+padding:15px;
+}
+
+/* CARD */
+.card{
+background:#1e0000;
+
+border-radius:18px;
+overflow:hidden;
+
+border:1px solid
+rgba(255,0,0,0.15);
+
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.video-container{
+position:relative;
+}
+
+video{
+width:100%;
+height:250px;
+
+object-fit:cover;
+background:black;
+}
+
+/* PLAY BUTTON */
+.play-btn{
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:
+translate(-50%,-50%);
+
+width:70px;
+height:70px;
+
+border-radius:50%;
+border:none;
+
+background:
+rgba(255,0,60,0.9);
+
+color:white;
+
+font-size:30px;
+cursor:pointer;
+}
+
+/* FULLSCREEN */
+.fullscreen-btn{
+position:absolute;
+
+bottom:10px;
+right:10px;
+
+background:
+rgba(0,0,0,0.7);
+
+border:none;
+color:white;
+
+padding:8px 10px;
+
+border-radius:10px;
+cursor:pointer;
+
+font-size:14px;
+}
+
+/* CONTENT */
+.content{
+padding:12px;
+}
+
+.title{
+font-size:17px;
+font-weight:bold;
+
+line-height:1.4;
+
+margin-bottom:8px;
+}
+
+.meta{
+color:#aaa;
+font-size:14px;
+}
+
+/* HIDE DOWNLOAD */
+video::-internal-media-controls-download-button{
+display:none;
+}
+
+video::-webkit-media-controls-enclosure{
+overflow:hidden;
+}
+
+video::-webkit-media-controls-panel{
+width:calc(100% + 30px);
+}
+
+/* ADS */
+.ads-box{
+padding:15px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+video{
+height:220px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+
+<div style="font-size:28px;">
+☰
+</div>
+
+<div class="logo">
+DARKVID
+</div>
+
+<div style="font-size:25px;">
+⚪
+</div>
+
+</div>
+
+<!-- SEARCH -->
+<div class="search-box">
+
+<input
+type="text"
+class="search"
+placeholder="Search videos...">
+
+</div>
+
+<!-- CATEGORY -->
+<div class="categories">
+
+<button class="active">
+Popular
+</button>
+
+<button>
+Trending
+</button>
+
+<button>
+Newest
+</button>
+
+<button>
+Longest
+</button>
+
+</div>
+
+<!-- ADS -->
+<div class="ads-box">
+
+<div id="container-83d5edc9887aba56c2cdb2e856dd539e">
+</div>
+
+</div>
+
+<!-- VIDEO GRID -->
+<div class="grid">
+
+<!-- VIDEO 1 -->
+<div class="card">
+
+<div class="video-container">
+
+<video
+controls
+controlsList="nodownload"
+onclick="openLink()">
+
+<source
+src="video1.mp4"
+type="video/mp4">
+
+</video>
+
+<button
+class="play-btn"
+onclick="openLink()">
+▶
+</button>
+
+<button
+class="fullscreen-btn"
+onclick="openFullscreen(this)">
+⛶
+</button>
+
+</div>
+
+<div class="content">
+
+<div class="title">
+Trending Viral Video Collection
+</div>
+
+<div class="meta">
+👁 1.2M • 2 hours ago
+</div>
+
+</div>
+</div>
+
+<!-- VIDEO 2 -->
+<div class="card">
+
+<div class="video-container">
+
+<video
+controls
+controlsList="nodownload"
+onclick="openLink()">
+
+<source
+src="video2.mp4"
+type="video/mp4">
+
+</video>
+
+<button
+class="play-btn"
+onclick="openLink()">
+▶
+</button>
+
+<button
+class="fullscreen-btn"
+onclick="openFullscreen(this)">
+⛶
+</button>
+
+</div>
+
+<div class="content">
+
+<div class="title">
+Full HD Streaming Video
+</div>
+
+<div class="meta">
+👁 856K • 5 hours ago
+</div>
+
+</div>
+</div>
+
+</div>
+
+<!-- POPUNDER -->
+<script async
+src="https://sireimplement.com/b1/f7/c5/b1f7c5c91a40414911c99301689e6c69.js">
+</script>
+
+<script>
+
+/* FULLSCREEN */
+function openFullscreen(button){
+
+const video =
+button.parentElement
+.querySelector("video");
+
+if(video.requestFullscreen){
+video.requestFullscreen();
+}
+
+else if(video.webkitRequestFullscreen){
+video.webkitRequestFullscreen();
+}
+
+else if(video.msRequestFullscreen){
+video.msRequestFullscreen();
+}
+
+}
+
+/* SMARTLINK */
+function openLink(){
+
+window.open(
+"https://sireimplement.com/n41kbwakyi?key=3ddbe85538d10b914b07dd1af87bf98f",
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
